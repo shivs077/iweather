@@ -2,9 +2,6 @@ import { Component } from "@angular/core";
 import { NavController } from "ionic-angular";
 import { Storage } from "@ionic/storage";
 
-import { TabsPage } from "../tabs/tabs";
-import { AlertController } from "ionic-angular";
-
 @Component({
   selector: "settings",
   templateUrl: "settings.html"
@@ -12,11 +9,8 @@ import { AlertController } from "ionic-angular";
 export class SettingsPage {
   city: string;
   state: string;
-  constructor(
-    public navCtrl: NavController,
-    private storage: Storage,
-    private alertCtrl: AlertController
-  ) {
+
+  constructor(public navCtrl: NavController, private storage: Storage) {
     this.storage.get("location").then(val => {
       if (val != null) {
         let location = JSON.parse(val);
