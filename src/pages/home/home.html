@@ -5,8 +5,12 @@
 </ion-header>
 
 <ion-content padding class="home">
+  <ion-grid *ngIf="!weather">
+    <h2 class="location">City not found</h2>
+    <h3 class="disc">Please provide a valid City-Country Combination :)</h3>
+  </ion-grid>
   <ion-grid *ngIf="weather">
-    <ion-row>
+    <ion-row *ngIf="weather.cod=='200'">
       <ion-col width-50 offset-25>
         <h2 class="location">
           {{weather.name+", "+weather.sys.country}}

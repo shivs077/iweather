@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 import { NavController } from "ionic-angular";
 import { WeatherProvider } from "../../providers/weather/weather";
 import { Storage } from "@ionic/storage";
-import { SettingsPage } from "../settings/settings";
+
 @Component({
   selector: "page-home",
   templateUrl: "home.html"
@@ -25,6 +25,7 @@ export class HomePage {
 
   //       else{
   ionViewWillEnter() {
+    this.weather = null;
     this.storage.get("location").then(val => {
       if (val != null) {
         this.location = JSON.parse(val);
@@ -39,6 +40,7 @@ export class HomePage {
         .getWeather(this.location.city, this.location.state)
         .subscribe(weather => {
           this.weather = weather;
+          console.log(this.weather);
         });
     });
     //       }

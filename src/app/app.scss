@@ -1,40 +1,43 @@
-.home{
-    background: color($colors,primary);
-    color:color($colors,dk);
-    margin-top:30px;
+.home {
+  background: color($colors, primary);
+  color: color($colors, dk);
+  margin-top: 30px;
 }
 
-.toolbar-title{
-    text-align: center;
+.toolbar-title {
+  text-align: center;
 }
 
 //.tabs-md .tab-button-icon{
 //    color:#ccc !important;
 //}
 
-.temp{
-    font-size: 90px;
-    text-align:center;
-    font-weight: normal;
+.temp {
+  font-size: 70px;
+  text-align: center;
+  font-weight: normal;
 }
 
-.location, .icon, .disc{
-    text-align: center;
+.location,
+.icon,
+.disc {
+  text-align: center;
 }
 
-.icon img{
-    width:100px;
-}
-.location{
-    font-size: 40px;
+.icon img {
+  width: 180px;
 }
 
-.disc{
-    font-size: 30px;
+.location {
+  font-size: 40px;
 }
 
-.item strong{
-    color:color($colors,dk);
+.disc {
+  font-size: 30px;
+}
+
+.item strong {
+  color: color($colors, dk);
 }
 
 //.set{
